@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="span6 flash-container">
+		<% if model.errors.messages.length > 0 %>
+		<ul class="alert alert-error unstyled">
+			<% model.errors.each do |key, value| %>
+				<li><%= key %> <%= value %></li>
+			<% end %>
+		</ul>
+		<% end %>
+	</div>
+</div>

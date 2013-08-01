@@ -1,0 +1,16 @@
+<h3>카테고리 수정</h3>
+<hr>
+<%# binding.pry %>
+<%= form_for [:admin, @category] do |f| %>
+	<%= render :partial => "admin/shared/flash", :locals => { :model => @category } %>
+		<div class="row">
+			<div class="span6">
+				<%= f.label :title, "카테고리 이름" %>
+				<%= f.text_field :title %>
+			</div>	
+		</div>
+		<hr>
+		<div>
+			<%= f.submit "확인", :class=> 'btn btn-primary'%>
+		</div>
+<% end %>
