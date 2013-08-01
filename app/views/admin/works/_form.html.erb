@@ -1,0 +1,26 @@
+<%= render :partial => "admin/shared/flash", :locals => { :model => work } %>
+<%= form_for [:admin, work], :html => { :multipart => true } do |f| %>
+		<div class="row">
+			<div class="span6">
+				<%= f.label :title, "제목" %>
+				<%= f.text_field :title, class: 'span6' %>
+			</div>
+			<div class="span3">
+				<%= f.label :category_id, "카테고리" %>
+				<%= f.collection_select :category_id, Category.all, :id, :title, {include_blank: '없음'}, class: 'span3' %>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="span6">
+				<%= f.label :body, "설명" %>
+				<%= f.text_area :body, class: 'span6'  %>
+			</div>
+			<div class="span3">
+			</div>
+		</div>
+		<hr>
+		<div>
+			<%= f.submit "확인", :class=> 'btn btn-primary'%>
+		</div>
+<% end %>
