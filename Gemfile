@@ -27,6 +27,11 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+gem 'bootstrap-will_paginate'
+gem "paperclip", "~> 3.0"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

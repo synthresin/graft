@@ -2,7 +2,11 @@ Graft::Application.routes.draw do
   devise_for :admins
   get 'home/index'
 
-  root 'home#index'
+  root 'admin/works#index'
+
+  namespace :admin do
+    resources :works
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
